@@ -45,3 +45,6 @@ gem 'binding_of_caller', group: [:development]
 gem 'devise'
 gem 'omniauth-linkedin-oauth2'
 gem 'omniauth-xing'
+
+# API playgrounds
+gem 'xing_api'
