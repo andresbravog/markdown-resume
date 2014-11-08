@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20141108192956) do
     t.string   "uid"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", using: :btree
   add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 

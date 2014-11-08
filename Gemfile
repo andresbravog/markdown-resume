@@ -44,3 +44,4 @@ gem 'binding_of_caller', group: [:development]
 # Authentication
 gem 'devise'
 gem 'omniauth-linkedin-oauth2'
+gem 'omniauth-xing'

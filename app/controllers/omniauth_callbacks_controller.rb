@@ -1,7 +1,13 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
+  # GET /users/auth/linkedin/callback
   def linkedin
     sing_up_or_login('linkedin')
+  end
+
+  # GET /users/auth/xing/callback
+  def xing
+    sing_up_or_login('xing')
   end
 
   protected
