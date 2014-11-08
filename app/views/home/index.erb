@@ -1,6 +1,8 @@
 <% if @current_user.present? %>
   <%= "Welcome to markdown-resume #{@current_user.email}!!" %>
   <br><br>
+  <%= @current_user.credentials.inspect %>
+  <br><br>
   <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to "Sign in with linkedin", user_omniauth_authorize_path(:linkedin) %> o

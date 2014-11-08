@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   devise :omniauthable, omniauth_providers: [:linkedin, :xing]
 
+  serialize :credentials, Hash
+
   # Finds or creates user from omniauth info
   #
   # @param [type] ominiauth auth info object containing the user info
@@ -14,6 +16,7 @@ class User < ActiveRecord::Base
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
+      user.credentials = auth.credentials || auth.extra.access_token.params
     end
   end
 end
