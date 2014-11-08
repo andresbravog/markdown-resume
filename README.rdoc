@@ -1,28 +1,19 @@
-== README
+# Markdown-Resume
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The very first saas that conects your linkedin || xing account and exports oyur resume it as a static web site to Github.io || Heroku.
 
-Things you may want to cover:
+# WIP
 
-* Ruby version
+Still work in progress here but watch for updates
 
-* System dependencies
+# License
 
-* Configuration
+Copyright (c) 2014 Andrés Bravo
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
