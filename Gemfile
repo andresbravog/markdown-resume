@@ -41,3 +41,5 @@ gem 'devise'
 # gem 'debugger', group: [:development, :test]
 gem 'pry', group: [:development, :test]
 
+# Authentication
+gem 'omniauth-linkedin-oauth2'
