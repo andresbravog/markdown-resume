@@ -1,1 +1,7 @@
-<%= link_to "Sign in with linkedin", user_omniauth_authorize_path(:linkedin) %>
+<% if @current_user.present? %>
+  <%= "Welcome to markdown-resume #{@current_user.email}!!" %>
+<% else %>
+  <%= link_to "Sign in with linkedin", user_omniauth_authorize_path(:linkedin) %>
+<% end %>
+
+
