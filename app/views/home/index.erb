@@ -1,12 +1,28 @@
 <% if @current_user.present? %>
-  <%= "Welcome to markdown-resume #{@current_user.email}!!" %>
+  <div class="row preview-block">
   <br><br>
-  <%= link_to "Preview your profile", preview_path %>
+  <div class="col-xs-5"></div>
+  <div class="col-xs-3">
+      <%= link_to "Preview your profile", preview_path, class: 'btn btn-default btn-lg btn-primary' %>
+  </div>
+  <div class="col-xs-5"></div>
   <br><br>
-  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+  </div>
 <% else %>
-  <%= link_to "Sign in with linkedin", user_omniauth_authorize_path(:linkedin) %> o
-  <%= link_to "Sign in with xing", user_omniauth_authorize_path(:xing) %>
+  <div class="row sign-in-block">
+    <div class="col-xs-6 linkedin">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-3">
+        <%= link_to "Sign in with linkedin", user_omniauth_authorize_path(:linkedin), class: 'btn btn-default btn-lg btn-primary' %>
+      </div>
+    </div>
+    <div class="col-xs-6 xing">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-3">
+        <%= link_to "Sign in with xing", user_omniauth_authorize_path(:xing), class: 'btn btn-default btn-lg btn-primary' %>
+      </div>
+    </div>
+  </div>
 <% end %>
 
 

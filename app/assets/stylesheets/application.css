@@ -10,5 +10,29 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap_and_overrides
+ *= require ./flat-ui/flat-ui
  *= require_self
  */
+
+
+.preview-block {
+  padding: 120px 0px;
+  background-color: #E0D080;
+  border-radius: 5px;
+}
+
+.sign-in-block {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.sign-in-block .linkedin {
+  padding: 120px 0px;
+  background-color: #3F88B5;
+}
+
+.sign-in-block .xing {
+  padding: 120px 0px;
+  background-color: #4D9370;
+}

@@ -21,5 +21,8 @@ module MarkdownResume
     # config.i18n.default_locale = :de
     #
     config.autoload_paths << Rails.root.join('app/services')
+
+    config.app_generators.stylesheet_engine :less
+    config.less.paths << "#{Rails.root}/app/stylesheets"
   end
 end

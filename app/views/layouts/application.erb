@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
   <title>MarkdownResume</title>
@@ -7,8 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
+    <br>
+    <div class="row">
+      <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+        <!-- Navbar content -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="#">Markdown Resume</a>
+        </div>
 
-<%= yield %>
+        <% if @current_user.present? %>
+          <p class="navbar-text navbar-right">Signed in as <a class="navbar-link" href="#"><%= @current_user.email %></a></p>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-default navbar-btn navbar-right', type: 'button' %>
+        <% end %>
+      </nav>
+    </div>
+
+    <%= yield %>
+  </div>
 
 </body>
 </html>
