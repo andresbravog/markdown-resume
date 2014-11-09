@@ -38,7 +38,6 @@ gem 'spring',        group: :development
 
 # Styling
 group :assets do
- gem "therubyracer"
  gem "less-rails"
 end
 gem 'twitter-bootstrap-rails'
