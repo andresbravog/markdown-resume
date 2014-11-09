@@ -48,3 +48,7 @@ gem 'omniauth-xing'
 
 # API playgrounds
 gem 'xing_api'
+
+# Markup
+gem 'github-markup'
+gem 'github-markdown'
