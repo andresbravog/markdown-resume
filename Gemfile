@@ -37,8 +37,6 @@ gem 'spring',        group: :development
 # gem 'unicorn'
 
 # Styling
-gem "therubyracer",  group: [:development, :test]
-gem "less-rails", group: [:development, :test]
 gem 'twitter-bootstrap-rails'
 
 
