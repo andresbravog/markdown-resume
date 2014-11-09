@@ -14,6 +14,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # GET /users/auth/github/callback
   def github
     find_or_create_provider_link('github')
+    ResumeExporter::Github.new(current_user).perform
   end
 
   protected

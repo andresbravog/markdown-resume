@@ -57,6 +57,7 @@ gem 'omniauth-github'
 
 # API playgrounds
 gem 'xing_api'
+gem "octokit", "~> 3.0"
 
 # Markup
 gem 'github-markup'
