@@ -36,3 +36,18 @@
   padding: 120px 0px;
   background-color: #4D9370;
 }
+
+.export-block {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.export-block .github {
+  padding: 120px 0px;
+  background-color: #FE2C1C;
+}
+
+.export-block .heroku {
+  padding: 120px 0px;
+  background-color: #575488;
+}

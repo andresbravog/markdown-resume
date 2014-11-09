@@ -4,9 +4,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
 
-  devise :omniauthable, omniauth_providers: [:linkedin, :xing]
+  devise :omniauthable, omniauth_providers: [:linkedin, :xing, :github]
 
   serialize :credentials, Hash
+
+  has_many :provider_links
 
   # Finds or creates user from omniauth info
   #

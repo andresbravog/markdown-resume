@@ -1,12 +1,32 @@
 <% if @current_user.present? %>
   <div class="row preview-block">
-  <br><br>
-  <div class="col-xs-5"></div>
-  <div class="col-xs-3">
-      <%= link_to "Preview your profile", preview_path, class: 'btn btn-default btn-lg btn-primary' %>
+    <br><br>
+    <div class="col-xs-5"></div>
+    <div class="col-xs-3">
+        <%= link_to "Preview your profile", preview_path, class: 'btn btn-default btn-lg btn-primary' %>
+    </div>
+    <div class="col-xs-5"></div>
+    <br><br>
   </div>
-  <div class="col-xs-5"></div>
-  <br><br>
+  <div class="row export-block">
+    <div class="col-xs-6 github">
+      <div class="col-xs-3"></div>
+      <% unless @current_user.provider_links.where(provider: 'github').present? %>
+        <div class="col-xs-3">
+          <%= link_to "Export to Github", user_omniauth_authorize_path(:github), class: 'btn btn-default btn-lg btn-primary' %>
+        </div>
+      <% else %>
+        <div class="col-xs-3">
+          <%= "Already connected to Github Thanks" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-xs-6 heroku">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-3">
+        <%#= link_to "Export to Heroku", omniauth_authorize_path(:heroku), class: 'btn btn-default btn-lg btn-primary' %>
+      </div>
+    </div>
   </div>
 <% else %>
   <div class="row sign-in-block">
